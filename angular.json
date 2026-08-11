@@ -28,11 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            
           },
           "configurations": {
             "production": {
@@ -44,8 +40,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "12kb"
                 }
               ],
               "outputHashing": "all"
@@ -96,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c10174c0-465b-48e8-bb89-b9de07617819"
   }
 }

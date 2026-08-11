@@ -1,0 +1,450 @@
+<section class="institucional">
+  <header class="hero">
+    <div class="hero-media">
+      <img
+        [src]="slides[currentSlide].image"
+        [alt]="slides[currentSlide].title"
+        class="hero-image"
+      />
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-subtitle">
+        {{ slides[currentSlide].subtitle }}
+      </span>
+
+      <h1>
+        {{ slides[currentSlide].title }}
+        <span>la danza</span>
+      </h1>
+
+      <p class="hero-description">
+        {{ slides[currentSlide].description }}
+      </p>
+    </div>
+
+    <button
+      type="button"
+      class="carousel-button previous"
+      (click)="previousSlide()"
+      aria-label="Fotografía anterior"
+    >
+      ‹
+    </button>
+
+    <button
+      type="button"
+      class="carousel-button next"
+      (click)="nextSlide()"
+      aria-label="Fotografía siguiente"
+    >
+      ›
+    </button>
+
+    <div class="carousel-indicators">
+      <button
+        *ngFor="let slide of slides; let i = index"
+        type="button"
+        [class.active]="currentSlide === i"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Ir a fotografía ' + (i + 1)"
+      ></button>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       HISTORIA
+  ====================================================== -->
+
+  <section class="section history">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+
+        <div class="section-index">
+          01
+        </div>
+
+        <div>
+
+          <span class="section-kicker">
+            NUESTRA HISTORIA
+          </span>
+
+          <h2>
+            Una historia que
+            <em>se baila.</em>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="history-grid">
+
+        <div class="history-main">
+
+          <p class="lead">
+            IPSIS Danzas Andinas es una agrupación artística
+            que encuentra en la danza una forma de expresar,
+            preservar y compartir nuestras raíces.
+          </p>
+
+          <p>
+            Nuestra propuesta artística busca transmitir las
+            tradiciones y saberes de nuestros pueblos a las
+            nuevas generaciones, llevando al escenario la
+            riqueza, diversidad y colorido de nuestras culturas.
+          </p>
+
+          <p>
+            Desde Loja, compartimos nuestra pasión por la danza
+            y por nuestras raíces, representando las expresiones
+            culturales del Ecuador y de nuestros países hermanos.
+          </p>
+
+        </div>
+
+
+        <div class="history-art">
+
+          <div class="history-circle">
+
+            <span>IPSIS</span>
+
+          </div>
+
+          <div class="history-words">
+
+            <span>CULTURA</span>
+            <span>TRADICIÓN</span>
+            <span>IDENTIDAD</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       MISIÓN
+  ====================================================== -->
+
+  <section class="section mission">
+
+    <div class="section-container">
+
+      <div class="center-heading">
+
+        <span class="section-kicker">
+          02 — MISIÓN
+        </span>
+
+        <h2>
+          Vivir nuestras
+          <em>raíces.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="mission-layout">
+
+        <div class="mission-number">
+          M
+        </div>
+
+        <div class="mission-content">
+
+          <div class="decorative-line"></div>
+
+          <p>
+            Fortalecer y difundir las manifestaciones culturales
+            de nuestro país mediante la danza, promoviendo el
+            respeto, valoración y transmisión de nuestras
+            tradiciones a través de las diferentes generaciones.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       VISIÓN
+  ====================================================== -->
+
+  <section class="section vision">
+
+    <div class="vision-image">
+
+      <div class="vision-image-overlay"></div>
+
+      <div class="vision-statement">
+
+        <span>
+          NUESTRA VISIÓN
+        </span>
+
+        <h2>
+          Llevar nuestras raíces
+          <br>
+          <em>más allá de nuestras fronteras.</em>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="section-container">
+
+      <div class="vision-text">
+
+        <div class="section-index">
+          03
+        </div>
+
+        <div>
+
+          <span class="section-kicker">
+            VISIÓN
+          </span>
+
+          <p>
+            Consolidarnos como una agrupación artística
+            reconocida por la calidad de sus propuestas,
+            el compromiso con nuestras raíces y la capacidad
+            de transmitir nuestra identidad cultural mediante
+            espectáculos que conecten con diferentes públicos.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ORGANIGRAMA
+  ====================================================== -->
+
+  <section class="section organization">
+
+    <div class="section-container">
+
+      <div class="center-heading">
+
+        <span class="section-kicker">
+          04 — NUESTRA ORGANIZACIÓN
+        </span>
+
+        <h2>
+          Una agrupación,
+          <em>tres generaciones.</em>
+        </h2>
+
+        <p>
+          Tres elencos. Una misma pasión por la danza.
+        </p>
+
+      </div>
+
+
+      <!-- DIRECTOR -->
+
+      <div class="director-card">
+
+        <div class="director-icon">
+          ✦
+        </div>
+
+        <div>
+
+          <span>
+            DIRECCIÓN GENERAL
+          </span>
+
+          <h3>
+            IPSIS Danzas Andinas
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="organization-connector"></div>
+
+
+      <!-- ELENCOS -->
+
+      <div class="elencos-grid">
+
+
+        <!-- INFANTIL -->
+
+        <article class="elenco-card infantil">
+
+          <div class="card-top">
+
+            <span>
+              01
+            </span>
+
+            <span>
+              ELENCO
+            </span>
+
+          </div>
+
+          <div class="card-icon">
+            ✦
+          </div>
+
+          <h3>
+            Infantil
+          </h3>
+
+          <p>
+            La energía, alegría e inocencia de nuestros
+            niños llevando nuestras raíces al escenario.
+          </p>
+
+          <a href="/elencoinfantil">
+            CONOCER EL ELENCO
+            <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PRINCIPAL -->
+
+        <article class="elenco-card principal">
+
+          <div class="card-top">
+
+            <span>
+              02
+            </span>
+
+            <span>
+              ELENCO
+            </span>
+
+          </div>
+
+          <div class="card-icon">
+            ✦
+          </div>
+
+          <h3>
+            Principal
+          </h3>
+
+          <p>
+            Jóvenes artistas que representan la fuerza,
+            identidad y evolución de nuestra agrupación.
+          </p>
+
+          <a href="/elencoprincipal">
+            CONOCER EL ELENCO
+            <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- MASTER -->
+
+        <article class="elenco-card master">
+
+          <div class="card-top">
+
+            <span>
+              03
+            </span>
+
+            <span>
+              ELENCO
+            </span>
+
+          </div>
+
+          <div class="card-icon">
+            ✦
+          </div>
+
+          <h3>
+            Máster
+          </h3>
+
+          <p>
+            Padres de familia y adultos que demuestran
+            que la pasión por la danza no tiene edad.
+          </p>
+
+          <a href="/elencomaster">
+            CONOCER EL ELENCO
+            <span>→</span>
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CIERRE
+  ====================================================== -->
+
+  <section class="closing">
+
+    <div class="closing-background"></div>
+
+    <div class="closing-overlay"></div>
+
+    <div class="closing-content">
+
+      <span>
+        IPSIS DANZAS ANDINAS
+      </span>
+
+      <h2>
+        Nuestras raíces
+        <br>
+        no solo se bailan...
+      </h2>
+
+      <strong>
+        se viven.
+      </strong>
+
+    </div>
+
+  </section>
+
+</section>

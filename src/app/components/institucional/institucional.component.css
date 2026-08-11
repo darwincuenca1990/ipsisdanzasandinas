@@ -17,8 +17,8 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 88vh;
-  min-height: 620px;
+  height: 90vh;
+  min-height: 600px;
   overflow: hidden;
   background: #050505;
 }
@@ -34,8 +34,8 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center;
-  transform: scale(1.04);
+  object-position: 80% 25%;
+  transform: none;
 }
 
 .hero-overlay {
@@ -297,6 +297,10 @@
   justify-content: center;
 
   position: relative;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .history-circle::before {
@@ -311,12 +315,18 @@
   border-radius: 50%;
 }
 
-.history-circle span {
-  font-size: 3rem;
+.history-logo {
+  width: 82%;
 
-  font-weight: 700;
+  height: 82%;
 
-  letter-spacing: 0.1rem;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 50%;
+
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.12));
 }
 
 .history-words {
@@ -411,15 +421,14 @@
 
 .vision-image {
   position: relative;
-
-  height: 600px;
+  height: 500px;
 
   background-image:
-    url('/assets/images/bannerPlanta.jpeg');
+    url('/assets/images/Wiki.jpg');
 
   background-size: cover;
 
-  background-position: center;
+  object-position: 70% 15%;
 }
 
 .vision-image-overlay {
@@ -692,6 +701,125 @@
 
 
 /* =========================================================
+   CONTACTO
+========================================================= */
+
+.contact-section {
+  padding: 120px 0 80px;
+  background: #0b0b0b;
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.contact-header h2 em {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 34px 30px;
+}
+
+.card-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.24rem;
+  color: #d92424;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.download-card h3,
+.info-card h3 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+}
+
+.download-card p {
+  margin: 0 0 26px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  background: #d92424;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.download-button:hover {
+  background: #b30000;
+  transform: translateY(-2px);
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-list strong {
+  font-size: 0.7rem;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.contact-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.03rem;
+}
+
+.contact-list a:hover {
+  color: #d92424;
+}
+
+
+/* =========================================================
    CIERRE
 ========================================================= */
 
@@ -717,13 +845,11 @@
   inset: 0;
 
   background-image:
-    url('/assets/images/bannerMaster.png');
+    url('/assets/images/bannerInfantil.jpeg');
 
-  background-size: cover;
+  background-size: auto 100%;
 
-  background-position: center;
 
-  transform: scale(1.03);
 }
 
 .closing-overlay {
@@ -834,6 +960,10 @@
     margin: auto;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 
@@ -931,7 +1061,7 @@
   }
 
   .vision-image {
-    height: 500px;
+    height: 300px;
   }
 
   .vision-statement {

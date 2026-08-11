@@ -13,19 +13,19 @@ export class InstitucionalComponent implements OnInit, OnDestroy {
 
   slides = [
     {
-      image: 'assets/images/bannerInfantil.jpeg',
+      image: 'assets/images/hayaUma.jpg',
       title: 'IPSIS DANZAS ANDINAS',
       subtitle: 'Cultura y tradición',
       description: 'Expresiones andinas que celebran nuestras raíces.'
     },
     {
-      image: 'assets/images/bannerPlanta.jpeg',
+      image: 'assets/images/bannerMaster.png',
       title: 'Nuestra danza',
       subtitle: 'Escenario y movimiento',
       description: 'Cada paso cuenta la historia de nuestra identidad.'
     },
     {
-      image: 'assets/images/bannerMaster.png',
+      image: 'assets/images/shuarninos.png',
       title: 'Nuestras raíces',
       subtitle: 'Pasión y herencia',
       description: 'Transmitimos la cultura a nuevas generaciones.'

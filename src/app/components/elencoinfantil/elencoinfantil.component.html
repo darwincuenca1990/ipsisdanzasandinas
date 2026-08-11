@@ -1,1 +1,64 @@
-<p>elencoinfantil works!</p>
+<section class="elenco-page">
+  <header class="elenco-hero">
+    <div class="elenco-hero__content">
+      <span class="eyebrow">ELENCO INFANTIL</span>
+      <h1>Infantil</h1>
+      <p>
+        Un espacio donde los más pequeños descubren la alegría de la danza andina,
+        la expresión corporal y el valor de nuestras raíces a través del movimiento.
+      </p>
+    </div>
+
+    <div class="elenco-hero__badge">
+      <span>01</span>
+      <small>Infantil</small>
+    </div>
+  </header>
+
+  <section class="elenco-detail">
+    <article class="description-card">
+      <span class="section-tag">DESCRIPCIÓN</span>
+      <h2>Sobre este elenco</h2>
+      <p>
+        El elenco infantil de IPSIS Danzas Andinas reúne a niñas y niños con gran
+        entusiasmo, creatividad y disciplina. A través de coreografías inspiradas en
+        tradiciones andinas, promueven la identidad cultural, la sensibilidad artística
+        y el trabajo en equipo desde una edad temprana.
+      </p>
+      <p>
+        Cada presentación refleja la energía de la juventud, la riqueza de nuestros
+        pueblos y la pasión por mantener vivas las expresiones culturales de nuestra
+        región.
+      </p>
+    </article>
+
+    <aside class="info-card">
+      <div>
+        <span>EDAD</span>
+        <strong>Niños y niñas</strong>
+      </div>
+      <div>
+        <span>FOCO</span>
+        <strong>Expresión y tradición</strong>
+      </div>
+      <div>
+        <span>ESTILO</span>
+        <strong>Danza andina</strong>
+      </div>
+    </aside>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-header">
+      <span class="section-tag">GALERÍA</span>
+      <h2>Momentos del elenco</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item" *ngFor="let item of gallery">
+        <img [src]="item.image" [alt]="item.title" />
+        <figcaption>{{ item.title }}</figcaption>
+      </figure>
+    </div>
+  </section>
+</section>

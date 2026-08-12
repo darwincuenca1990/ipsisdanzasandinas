@@ -24,6 +24,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "baseHref": "/ipsis/",
+            "deployUrl": "/ipsis/",
             "styles": [
               "src/styles.css"
             ],

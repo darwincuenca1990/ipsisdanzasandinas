@@ -1,1 +1,82 @@
-<p>elencomaster works!</p>
+<section class="elenco-page">
+  <div class="top-actions">
+    <button type="button" class="back-button" [routerLink]="['/']">
+      ← Volver al menú principal
+    </button>
+  </div>
+
+  <header class="elenco-hero">
+    <div class="elenco-hero__content">
+      <span class="eyebrow">ELENCO MASTER</span>
+      <h1>Máster</h1>
+      <p>
+        El elenco máster representa la experiencia, la madurez y la entrega de quienes llevan
+        por más de una vida el legado de la danza andina en cada paso y cada mirada.
+      </p>
+    </div>
+
+    <div class="elenco-hero__badge">
+      <span>03</span>
+      <small>Máster</small>
+    </div>
+  </header>
+
+  <section class="elenco-detail">
+    <article class="description-card">
+      <span class="section-tag">DESCRIPCIÓN</span>
+      <h2>Sobre este elenco</h2>
+      <p>
+        El elenco máster de IPSIS Danzas Andinas está conformado por personas con una gran
+        experiencia artística y una profunda conexión con la tradición. Su presencia aporta
+        un valor cultural y emocional muy importante a la agrupación.
+      </p>
+      <p>
+        En cada presentación, reflejan la riqueza de la historia, la constancia del trabajo
+        colectivo y la fuerza de una generación que sigue transmitiendo el arte con orgullo.
+      </p>
+    </article>
+
+    <aside class="info-card">
+      <div>
+        <span>EDAD</span>
+        <strong>Adultos y familias</strong>
+      </div>
+      <div>
+        <span>FOCO</span>
+        <strong>Experiencia y legado</strong>
+      </div>
+      <div>
+        <span>ESTILO</span>
+        <strong>Tradición y elegancia</strong>
+      </div>
+    </aside>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-header">
+      <span class="section-tag">GALERÍA</span>
+      <h2>Momentos del elenco</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item" *ngFor="let item of gallery; let i = index" (click)="openLightbox(i)">
+        <img [src]="item.image" [alt]="item.title" />
+        <figcaption>{{ item.title }}</figcaption>
+      </figure>
+    </div>
+  </section>
+</section>
+
+<div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+  <div class="lightbox__content" (click)="$event.stopPropagation()">
+    <button type="button" class="close-button" (click)="closeLightbox()" aria-label="Cerrar">×</button>
+
+    <button type="button" class="nav-button nav-button--prev" (click)="prevImage()" aria-label="Anterior">‹</button>
+
+    <img [src]="gallery[selectedIndex].image" [alt]="gallery[selectedIndex].title" />
+
+    <button type="button" class="nav-button nav-button--next" (click)="nextImage()" aria-label="Siguiente">›</button>
+
+    <div class="lightbox__caption">{{ gallery[selectedIndex].title }}</div>
+  </div>
+</div>

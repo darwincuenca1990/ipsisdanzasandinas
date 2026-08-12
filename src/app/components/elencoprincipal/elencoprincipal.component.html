@@ -1,1 +1,82 @@
-<p>elencoprincipal works!</p>
+<section class="elenco-page">
+  <div class="top-actions">
+    <button type="button" class="back-button" [routerLink]="['/']">
+      ← Volver al menú principal
+    </button>
+  </div>
+
+  <header class="elenco-hero">
+    <div class="elenco-hero__content">
+      <span class="eyebrow">ELENCO PRINCIPAL</span>
+      <h1>Principal</h1>
+      <p>
+        Un elenco de gran fuerza artística, donde la técnica, la expresividad y la identidad
+        cultural se unen para representar la esencia de la danza andina con calidad y pasión.
+      </p>
+    </div>
+
+    <div class="elenco-hero__badge">
+      <span>02</span>
+      <small>Principal</small>
+    </div>
+  </header>
+
+  <section class="elenco-detail">
+    <article class="description-card">
+      <span class="section-tag">DESCRIPCIÓN</span>
+      <h2>Sobre este elenco</h2>
+      <p>
+        El elenco principal de IPSIS Danzas Andinas reúne a jóvenes y adultos con una gran
+        dedicación artística y un profundo compromiso con la tradición. Sus presentaciones
+        representan la evolución de la agrupación, combinando disciplina, técnica y expresividad.
+      </p>
+      <p>
+        Cada coreografía transmite fuerza, energía y orgullo cultural, llevando al escenario la
+        riqueza de nuestras raíces con una propuesta moderna y auténtica.
+      </p>
+    </article>
+
+    <aside class="info-card">
+      <div>
+        <span>EDAD</span>
+        <strong>Jóvenes y adultos</strong>
+      </div>
+      <div>
+        <span>FOCO</span>
+        <strong>Fuerza y técnica</strong>
+      </div>
+      <div>
+        <span>ESTILO</span>
+        <strong>Danza andina clásica</strong>
+      </div>
+    </aside>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-header">
+      <span class="section-tag">GALERÍA</span>
+      <h2>Momentos del elenco</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item" *ngFor="let item of gallery; let i = index" (click)="openLightbox(i)">
+        <img [src]="item.image" [alt]="item.title" />
+        <figcaption>{{ item.title }}</figcaption>
+      </figure>
+    </div>
+  </section>
+</section>
+
+<div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+  <div class="lightbox__content" (click)="$event.stopPropagation()">
+    <button type="button" class="close-button" (click)="closeLightbox()" aria-label="Cerrar">×</button>
+
+    <button type="button" class="nav-button nav-button--prev" (click)="prevImage()" aria-label="Anterior">‹</button>
+
+    <img [src]="gallery[selectedIndex].image" [alt]="gallery[selectedIndex].title" />
+
+    <button type="button" class="nav-button nav-button--next" (click)="nextImage()" aria-label="Siguiente">›</button>
+
+    <div class="lightbox__caption">{{ gallery[selectedIndex].title }}</div>
+  </div>
+</div>

@@ -1,4 +1,10 @@
 <section class="elenco-page">
+  <div class="top-actions">
+    <button type="button" class="back-button" [routerLink]="['/']">
+      ← Volver al menú principal
+    </button>
+  </div>
+
   <header class="elenco-hero">
     <div class="elenco-hero__content">
       <span class="eyebrow">ELENCO INFANTIL</span>
@@ -55,10 +61,30 @@
     </div>
 
     <div class="gallery-grid">
-      <figure class="gallery-item" *ngFor="let item of gallery">
+      <figure class="gallery-item" *ngFor="let item of gallery; let i = index" (click)="openLightbox(i)">
         <img [src]="item.image" [alt]="item.title" />
         <figcaption>{{ item.title }}</figcaption>
       </figure>
     </div>
   </section>
 </section>
+
+<div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+  <div class="lightbox__content" (click)="$event.stopPropagation()">
+    <button type="button" class="close-button" (click)="closeLightbox()" aria-label="Cerrar">×</button>
+
+    <button type="button" class="nav-button nav-button--prev" (click)="prevImage()" aria-label="Anterior">
+      ‹
+    </button>
+
+    <img [src]="gallery[selectedIndex].image" [alt]="gallery[selectedIndex].title" />
+
+    <button type="button" class="nav-button nav-button--next" (click)="nextImage()" aria-label="Siguiente">
+      ›
+    </button>
+
+    <div class="lightbox__caption">
+      {{ gallery[selectedIndex].title }}
+    </div>
+  </div>
+</div>

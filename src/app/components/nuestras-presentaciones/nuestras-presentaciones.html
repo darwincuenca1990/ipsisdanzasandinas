@@ -1,0 +1,98 @@
+<section class="presentations-page">
+  <header class="presentations-header">
+    <span class="eyebrow">Nuestras presentaciones</span>
+    <h1>Nuestras Presentaciones</h1>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Nuestras presentaciones">
+    <button
+      type="button"
+      class="tab-button"
+      [class.active]="activeTab === 'obras'"
+      (click)="setTab('obras')"
+      role="tab"
+      [attr.aria-selected]="activeTab === 'obras'"
+    >
+      Obras / Festivales
+    </button>
+
+    <button
+      type="button"
+      class="tab-button"
+      [class.active]="activeTab === 'presentaciones'"
+      (click)="setTab('presentaciones')"
+      role="tab"
+      [attr.aria-selected]="activeTab === 'presentaciones'"
+    >
+      Presentaciones
+    </button>
+  </div>
+
+  <div class="tab-panel" *ngIf="activeTab === 'obras'">
+    <article class="feature-card">
+      <div class="feature-copy">
+        <span class="section-tag">Obra destacada</span>
+        <h2>Wawas Raymi</h2>
+        <p>
+          Una propuesta artística que refleja la fuerza, la identidad y la belleza de la danza
+          andina, llevada al escenario con energía, precisión y emoción.
+        </p>
+        <a
+          class="video-link"
+          href="https://www.youtube.com/watch?v=RS7f7ooB06I&pp=ygUMd2F3YXMgcmF5bWl7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver en YouTube
+        </a>
+      </div>
+
+      <div class="video-preview">
+        <a
+          href="https://www.youtube.com/watch?v=RS7f7ooB06I&pp=ygUMd2F3YXMgcmF5bWl7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="video-thumb"
+          aria-label="Ver Wawas Raymi en YouTube"
+        >
+          <img
+            src="https://img.youtube.com/vi/RS7f7ooB06I/hqdefault.jpg"
+            alt="Previsualización de Wawas Raymi"
+          />
+          <span class="play-badge">▶</span>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="tab-panel" *ngIf="activeTab === 'presentaciones'">
+    <div class="event-grid">
+      <article class="event-card">
+        <span class="event-label">Festival</span>
+        <h3>Festival de la Tradición</h3>
+        <p>
+          Presentación de repertorio andino con coreografías que celebran la identidad regional y
+          la raíz cultural del país.
+        </p>
+      </article>
+
+      <article class="event-card">
+        <span class="event-label">Evento institucional</span>
+        <h3>Velada Cultural IPSIS</h3>
+        <p>
+          Espectáculo que reúne a nuestras tres generaciones en una misma puesta en escena, con un
+          lenguaje artístico y cultural profundamente ligado a nuestras raíces.
+        </p>
+      </article>
+
+      <article class="event-card">
+        <span class="event-label">Presentación abierta</span>
+        <h3>Encuentro comunitario</h3>
+        <p>
+          Participación en espacios compartidos con el público, donde la danza se convierte en un
+          puente de convivencia, homenaje y orgullo cultural.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>

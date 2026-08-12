@@ -12,21 +12,73 @@ import { RouterLink } from '@angular/router';
 export class ElencoinfantilComponent {
   gallery = [
     {
-      image: 'assets/images/bannerInfantil.jpeg',
-      title: 'Presentación infantil'
+      image: 'assets/images/infantil/I1.jpeg',
+      title: 'Intiraymi infantil'
     },
     {
-      image: 'assets/images/bannerPlanta.jpeg',
-      title: 'Ensayo y movimiento'
+      image: 'assets/images/infantil/I2.jpeg',
+      title: 'Intiraymi infantil'
     },
     {
-      image: 'assets/images/bannerMaster.png',
-      title: 'Expresión y tradición'
+      image: 'assets/images/infantil/I3.jpeg',
+      title: 'Intiraymi infantil'
     },
     {
-      image: 'assets/images/Logo2024.jpeg',
-      title: 'Logo IPSIS'
-    }
+      image: 'assets/images/infantil/O1.png',
+      title: 'Otavalo infantil'
+    },
+    {
+      image: 'assets/images/infantil/O2.jpeg',
+      title: 'Otavalo infantil'
+    },
+    {
+      image: 'assets/images/infantil/O3.jpeg',
+      title: 'Otavalo infantil'
+    },
+    {
+      image: 'assets/images/infantil/PAN1.png',
+      title: 'Pasacalle infantil'
+    },            
+    {
+      image: 'assets/images/infantil/PAN2.png',
+      title: 'Pasacalle infantil'
+    },    
+      {
+      image: 'assets/images/infantil/PAN3.jpeg',
+      title: 'Pasacalle infantil'
+    },
+    {
+      image: 'assets/images/infantil/SAN1.jpeg',
+      title: 'Saraguro infantil'
+    },    
+    {
+      image: 'assets/images/infantil/SAN2.jpeg',
+      title: 'Saraguro infantil'
+    },    
+    {
+      image: 'assets/images/infantil/SAN3.jpeg',
+      title: 'Saraguro infantil'
+    },    
+    {
+      image: 'assets/images/infantil/SN1.png',
+      title: 'Shuar infantil'
+    },        
+    {
+      image: 'assets/images/infantil/SN2.jpeg',
+      title: 'Shuar infantil'
+    },        
+    {
+      image: 'assets/images/infantil/SN3.jpeg',
+      title: 'Shuar infantil'
+    },        
+    {
+      image: 'assets/images/infantil/ZN1.jpeg',
+      title: 'Zumbahua infantil'
+    },        
+    {
+      image: 'assets/images/infantil/ZN2.png',
+      title: 'Zumbahua infantil'
+    },        
   ];
 
   selectedIndex = 0;

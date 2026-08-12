@@ -7,6 +7,120 @@
   overflow: hidden;
   background: #0b0b0b;
   color: #ffffff;
+  position: relative;
+}
+
+/* Decorative red curved lines to soften the black background */
+
+.institucional::before,
+.institucional::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  will-change: background-position, transform, opacity;
+}
+
+.institucional::before {
+  left: -10%;
+  top: 6%;
+  width: 120%;
+  height: 28%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'><path d='M0,220 C300,50 900,350 1200,220' stroke='%23d92424' stroke-width='60' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+  opacity: 0.16;
+  animation: slideBgBefore 12s linear infinite, floatBefore 4.2s ease-in-out infinite;
+}
+
+.institucional::after {
+  right: -8%;
+  bottom: 8%;
+  width: 110%;
+  height: 24%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 240'><path d='M0,180 C250,30 750,330 1000,180' stroke='%23d92424' stroke-width='100' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 210% 100%;
+  background-position: 0% 50%;
+  opacity: 0.15;
+  animation: slideBgAfter 10s linear infinite, floatAfter 5s ease-in-out infinite;
+}
+
+/* Additional multiple full-height animated curves */
+.decorative-curves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.decorative-curves .curve {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 140%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 300% 120%;
+  background-position: 0% 50%;
+  mix-blend-mode: screen;
+  opacity: 0.14;
+}
+
+.decorative-curves .curve.c1 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,900 C300,200 900,1400 1200,900' stroke='%23ff6b6b' stroke-width='90' fill='none' stroke-linecap='round'/></svg>"); animation: slide1 18s linear infinite, floatExtra 6s ease-in-out infinite; opacity:0.18; }
+.decorative-curves .curve.c2 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,820 C300,150 900,1280 1200,820' stroke='%23ff7a7a' stroke-width='70' fill='none' stroke-linecap='round'/></svg>"); animation: slide2 14s linear infinite, floatExtra 5.2s ease-in-out infinite; opacity:0.16; }
+.decorative-curves .curve.c3 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,760 C300,100 900,1220 1200,760' stroke='%23ff8a8a' stroke-width='60' fill='none' stroke-linecap='round'/></svg>"); animation: slide3 22s linear infinite, floatExtra 6.6s ease-in-out infinite; opacity:0.15; }
+.decorative-curves .curve.c4 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,680 C300,60 900,1120 1200,680' stroke='%23ff4b4b' stroke-width='110' fill='none' stroke-linecap='round'/></svg>"); animation: slide4 20s linear infinite, floatExtra 7s ease-in-out infinite; opacity:0.2; }
+.decorative-curves .curve.c5 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,840 C300,180 900,1320 1200,840' stroke='%23ff5a5a' stroke-width='80' fill='none' stroke-linecap='round'/></svg>"); animation: slide5 16s linear infinite, floatExtra 5.8s ease-in-out infinite; opacity:0.17; }
+.decorative-curves .curve.c6 { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1200'><path d='M0,720 C300,90 900,1180 1200,720' stroke='%23ff3b3b' stroke-width='100' fill='none' stroke-linecap='round'/></svg>"); animation: slide6 24s linear infinite, floatExtra 8s ease-in-out infinite; opacity:0.14; }
+
+@keyframes slide1 { 0%{background-position:0% 50%}100%{background-position:100% 50%} }
+@keyframes slide2 { 0%{background-position:100% 50%}100%{background-position:0% 50%} }
+@keyframes slide3 { 0%{background-position:0% 50%}100%{background-position:100% 50%} }
+@keyframes slide4 { 0%{background-position:100% 50%}100%{background-position:0% 50%} }
+@keyframes slide5 { 0%{background-position:0% 50%}100%{background-position:100% 50%} }
+@keyframes slide6 { 0%{background-position:100% 50%}100%{background-position:0% 50%} }
+
+/* gentle vertical float for all extra curves */
+@keyframes floatExtra { 0%{transform:translateY(0)}25%{transform:translateY(-10px)}50%{transform:translateY(0)}75%{transform:translateY(10px)}100%{transform:translateY(0)} }
+
+/* make sure main content stays above curves (exclude the decorative-curves container) */
+.institucional > :not(.decorative-curves) { position: relative; z-index: 2; }
+
+/* also ensure each section's direct children sit above that section's curves */
+.section > :not(.decorative-curves) { position: relative; z-index: 2; }
+
+/* Slide background from left to right */
+@keyframes slideBgBefore {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes slideBgAfter {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Small vertical oscillation to give a wavy feel */
+@keyframes floatBefore {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatAfter {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(6px); }
+  50% { transform: translateY(0); }
+  80% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 

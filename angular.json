@@ -24,8 +24,6 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "baseHref": "/ipsis/",
-            "deployUrl": "/ipsis/",
             "styles": [
               "src/styles.css"
             ],
@@ -42,8 +40,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "8kb",
-                  "maximumError": "12kb"
+                  "maximumWarning": "14kb",
+                  "maximumError": "16kb"
                 }
               ],
               "outputHashing": "all"

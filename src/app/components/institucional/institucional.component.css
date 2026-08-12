@@ -423,8 +423,7 @@
   position: relative;
   height: 500px;
 
-  background-image:
-    url('/assets/images/Wiki.jpg');
+  background-image: var(--vision-bg);
 
   background-size: cover;
 
@@ -952,8 +951,7 @@
 
   inset: 0;
 
-  background-image:
-    url('/assets/images/bannerInfantil.jpeg');
+  background-image: var(--closing-bg);
 
   background-size: auto 100%;
 

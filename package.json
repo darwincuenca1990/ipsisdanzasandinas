@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ipsisdanzasandinas": "node dist/ipsisdanzasandinas/server/server.mjs",
-    "deploy": "ng build --configuration production --base-href /ipsisdanzasandinas/ && npx angular-cli-ghpages --dir=dist/ipsisdanzasandinas"
+    "deploy": "ng build --configuration production --base-href /ipsisdanzasandinas/ --deploy-url /ipsisdanzasandinas/ && npx angular-cli-ghpages --dir=dist/ipsisdanzasandinas/browser --branch=gh-pages"
 
   },
   "private": true,

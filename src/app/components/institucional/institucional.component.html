@@ -115,7 +115,7 @@
 
           <div class="history-circle">
 
-            <img src="/assets/images/Logo2024.jpeg" alt="Logo IPSIS" class="history-logo" />
+            <img [src]="logoImage" alt="Logo IPSIS" class="history-logo" />
 
           </div>
 
@@ -190,7 +190,7 @@
 
   <section class="section vision">
 
-    <div class="vision-image">
+    <div class="vision-image" [style.--vision-bg]="'url(' + visionImage + ')'">
 
       <div class="vision-image-overlay"></div>
 
@@ -563,7 +563,7 @@
 
   <section class="closing">
 
-    <div class="closing-background"></div>
+    <div class="closing-background" [style.--closing-bg]="'url(' + closingImage + ')'"></div>
 
     <div class="closing-overlay"></div>
 

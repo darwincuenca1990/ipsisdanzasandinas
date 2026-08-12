@@ -12,19 +12,19 @@ import { RouterLink } from '@angular/router';
 export class ElencoinfantilComponent {
   gallery = [
     {
-      image: '/assets/images/bannerInfantil.jpeg',
+      image: 'assets/images/bannerInfantil.jpeg',
       title: 'Presentación infantil'
     },
     {
-      image: '/assets/images/bannerPlanta.jpeg',
+      image: 'assets/images/bannerPlanta.jpeg',
       title: 'Ensayo y movimiento'
     },
     {
-      image: '/assets/images/bannerMaster.png',
+      image: 'assets/images/bannerMaster.png',
       title: 'Expresión y tradición'
     },
     {
-      image: '/assets/images/Logo2024.jpeg',
+      image: 'assets/images/Logo2024.jpeg',
       title: 'Logo IPSIS'
     }
   ];

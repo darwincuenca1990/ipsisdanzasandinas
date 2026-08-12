@@ -34,6 +34,10 @@ export class InstitucionalComponent implements OnInit, OnDestroy {
     }
   ];
 
+  logoImage = 'assets/images/Logo2024.jpeg';
+  visionImage = 'assets/images/Wiki.jpg';
+  closingImage = 'assets/images/bannerInfantil.jpeg';
+
   downloadUrl = PORTAFOLIO_GOOGLE_DRIVE_DOWNLOAD_URL;
   private intervalId?: number;
 

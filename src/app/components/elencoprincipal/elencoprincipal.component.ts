@@ -11,10 +11,10 @@ import { RouterLink } from '@angular/router';
 })
 export class ElencoprincipalComponent {
   gallery = [
-    { image: '/assets/images/bannerPlanta.jpeg', title: 'Presentación principal' },
-    { image: '/assets/images/bannerInfantil.jpeg', title: 'Ensayo y energía' },
-    { image: '/assets/images/bannerMaster.png', title: 'Tradición en movimiento' },
-    { image: '/assets/images/Logo2024.jpeg', title: 'Logo IPSIS' }
+    { image: 'assets/images/bannerPlanta.jpeg', title: 'Presentación principal' },
+    { image: 'assets/images/bannerInfantil.jpeg', title: 'Ensayo y energía' },
+    { image: 'assets/images/bannerMaster.png', title: 'Tradición en movimiento' },
+    { image: 'assets/images/Logo2024.jpeg', title: 'Logo IPSIS' }
   ];
 
   selectedIndex = 0;

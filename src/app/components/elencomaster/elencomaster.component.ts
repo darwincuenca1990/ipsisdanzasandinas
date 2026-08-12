@@ -11,10 +11,10 @@ import { RouterLink } from '@angular/router';
 })
 export class ElencomasterComponent {
   gallery = [
-    { image: 'assets/images/bannerMaster.png', title: 'Máster en escena' },
-    { image: 'assets/images/bannerInfantil.jpeg', title: 'Herencia y tradición' },
-    { image: 'assets/images/bannerPlanta.jpeg', title: 'Pasión y experiencia' },
-    { image: 'assets/images/Logo2024.jpeg', title: 'Logo IPSIS' }
+    { image: 'assets/images/master/P1.JPG', title: 'Máster en escena' },
+    { image: 'assets/images/master/P2.JPG', title: 'Máster en escena' },
+    { image: 'assets/images/master/P3.JPG', title: 'Máster en escena' },
+    { image: 'assets/images/master/P4.JPG', title: 'Máster en escena' }
   ];
 
   selectedIndex = 0;

@@ -1,4 +1,9 @@
 <section class="estructura-page">
+  <div class="top-actions">
+    <button type="button" class="back-button" [routerLink]="['/']">
+      ← Volver al menú principal
+    </button>
+  </div>  
   <div class="estructura-shell">
     <header class="estructura-header">
       <span class="eyebrow">Organigrama</span>
@@ -7,27 +12,162 @@
         Conoce el equipo que lidera y apoya a IPSIS Danzas Andinas.
       </p>
     </header>
+   <!-- ==========================
+         ORGANIGRAMA
+    =========================== -->
 
-    <div class="organigrama-grid">
-      <article class="organigrama-card lead-card">
-        <span class="role">Dirección General</span>
-        <strong>Mgtr. Darwin Cuenca</strong>
-      </article>
+    <div class="organigrama">
 
-      <article class="organigrama-card sub-card">
-        <span class="role">Subdirectora General</span>
-        <strong>Ing. Viviana Cabrera</strong>
-      </article>
 
-      <article class="organigrama-card accounting-card">
-        <span class="role">Contabilidad</span>
-        <strong>Mgtr. Daissy Alulima</strong>
-      </article>
+      <!-- ==========================
+           NIVEL 1 - DIRECCIÓN
+      =========================== -->
 
-      <article class="organigrama-card manager-card">
-        <span class="role">Community Manager</span>
-        <strong>Dayanna Tamay</strong>
-      </article>
+      <div class="nivel nivel-directivo">
+
+        <div class="persona-card persona-director">
+
+          <div class="foto-container">
+            <img
+              [src]="director.foto"
+              [alt]="director.nombre"
+              class="persona-foto">
+          </div>
+
+          <div class="persona-info">
+
+            <span class="persona-cargo">
+              {{ director.cargo }}
+            </span>
+
+            <h2>
+              {{ director.nombre }}
+            </h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONECTOR PRINCIPAL -->
+
+      <div class="connector connector-main"></div>
+
+
+      <!-- ==========================
+           NIVEL 2
+      =========================== -->
+
+      <div class="nivel nivel-secundario">
+
+        <!-- SUBDIRECTORA -->
+
+        <div class="rama">
+
+          <div class="connector connector-horizontal"></div>
+
+          <div class="persona-card">
+
+            <div class="foto-container">
+              <img
+                [src]="subdirectora.foto"
+                [alt]="subdirectora.nombre"
+                class="persona-foto">
+            </div>
+
+            <div class="persona-info">
+
+              <span class="persona-cargo">
+                {{ subdirectora.cargo }}
+              </span>
+
+              <h3>
+                {{ subdirectora.nombre }}
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTABILIDAD -->
+
+        <div class="rama">
+
+          <div class="connector connector-horizontal"></div>
+
+          <div class="persona-card">
+
+            <div class="foto-container">
+              <img
+                [src]="contabilidad.foto"
+                [alt]="contabilidad.nombre"
+                class="persona-foto">
+            </div>
+
+            <div class="persona-info">
+
+              <span class="persona-cargo">
+                {{ contabilidad.cargo }}
+              </span>
+
+              <h3>
+                {{ contabilidad.nombre }}
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==========================
+           NIVEL 3
+      =========================== -->
+
+      <div class="connector connector-sub"></div>
+
+      <div class="nivel nivel-terciario">
+
+        <div class="rama">
+
+          <div class="persona-card">
+
+            <div class="foto-container">
+              <img
+                [src]="communityManager.foto"
+                [alt]="communityManager.nombre"
+                class="persona-foto">
+            </div>
+
+            <div class="persona-info">
+
+              <span class="persona-cargo">
+                {{ communityManager.cargo }}
+              </span>
+
+              <h3>
+                {{ communityManager.nombre }}
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
+
+   
 </section>

@@ -1,75 +1,667 @@
+/* =====================================================
+   ESTRUCTURA ORGANIZACIONAL - IPSIS
+===================================================== */
+
 .estructura-page {
   min-height: 100vh;
-  padding: 80px 24px 100px;
-  background: #080808;
-  color: #f9f9f9;
+  padding: 80px 0 120px;
+
+  background: #0b0b0b;
+  color: #fff;
+
+  box-sizing: border-box;
 }
 
+
+/* =====================================================
+   BOTÓN VOLVER
+===================================================== */
+
+.top-actions {
+  width: min(1180px, 88%);
+  margin: 0 auto 40px;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+
+  padding: 12px 18px;
+
+  cursor: pointer;
+
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+
+  font-size: 0.68rem;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-button:hover {
+  border-color: #d92424;
+  color: #d92424;
+  transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
 .estructura-shell {
-  width: min(1100px, 100%);
+  width: min(1180px, 88%);
   margin: 0 auto;
 }
 
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 .estructura-header {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 .eyebrow {
   display: inline-block;
+
+  letter-spacing: 0.28rem;
   text-transform: uppercase;
-  letter-spacing: 0.22rem;
+
   color: #d92424;
-  margin-bottom: 16px;
-  font-size: 0.78rem;
+
+  font-size: 0.72rem;
+
+  margin-bottom: 18px;
 }
 
 .estructura-header h1 {
-  margin: 0 0 16px;
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
-  line-height: 1;
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.04em;
 }
 
 .estructura-header p {
   max-width: 700px;
-  color: rgba(255, 255, 255, 0.72);
+
+  margin-top: 20px;
+
+  font-size: 1.08rem;
+
   line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.72);
 }
 
-.organigrama-grid {
+
+/* =====================================================
+   ORGANIGRAMA
+===================================================== */
+
+.organigrama {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =====================================================
+   NIVELES
+===================================================== */
+
+.nivel {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* =====================================================
+   NIVEL DIRECTIVO
+===================================================== */
+
+.nivel-directivo {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   NIVEL SECUNDARIO
+===================================================== */
+
+.nivel-secundario {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+
+  grid-template-columns:
+    repeat(2, minmax(260px, 340px));
+
+  gap: 100px;
+
+  position: relative;
+
+  width: auto;
 }
 
-.organigrama-card {
-  background: rgba(255, 255, 255, 0.04);
+
+/* =====================================================
+   NIVEL TERCIARIO
+===================================================== */
+
+.nivel-terciario {
+  width: auto;
+}
+
+
+/* =====================================================
+   TARJETAS DE PERSONAS
+===================================================== */
+
+.persona-card {
+  width: 280px;
+
+  padding: 28px 25px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.035);
+
   border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 30px 28px;
-  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.organigrama-card .role {
-  display: inline-block;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.18rem;
-  color: #d92424;
-  font-size: 0.75rem;
+.persona-card:hover {
+  transform: translateY(-7px);
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border-color: rgba(217, 36, 36, 0.65);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
-.organigrama-card strong {
+
+/* =====================================================
+   DIRECTOR GENERAL
+===================================================== */
+
+.persona-director {
+  width: 330px;
+
+  padding: 34px 30px 28px;
+
+  border-color: rgba(217, 36, 36, 0.35);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(217, 36, 36, 0.12),
+      rgba(255, 255, 255, 0.035) 55%
+    );
+}
+
+.persona-director:hover {
+  border-color: #d92424;
+}
+
+
+/* =====================================================
+   FOTOGRAFÍA
+===================================================== */
+
+.foto-container {
+  position: relative;
+
+  width: 145px;
+  height: 145px;
+
+  padding: 4px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d92424 0%,
+      #8e1717 50%,
+      #d92424 100%
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(217, 36, 36, 0.2),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.persona-card:hover .foto-container {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 0 0 1px rgba(217, 36, 36, 0.4),
+    0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.persona-foto {
   display: block;
-  font-size: 1.9rem;
-  line-height: 1.1;
-  margin-top: 8px;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  background: #111;
 }
 
-.lead-card {
-  grid-column: span 2;
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.persona-info {
+  text-align: center;
+
+  margin-top: 20px;
 }
 
-@media (max-width: 900px) {
-  .organigrama-grid {
-    grid-template-columns: 1fr;
+.persona-cargo {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 0.66rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.20rem;
+
+  text-transform: uppercase;
+
+  color: #d92424;
+}
+
+.persona-info h2,
+.persona-info h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.persona-info h2 {
+  font-size: 1.35rem;
+}
+
+.persona-info h3 {
+  font-size: 1.08rem;
+}
+
+
+/* =====================================================
+   CONECTORES
+===================================================== */
+
+.connector {
+  position: relative;
+
+  background: rgba(217, 36, 36, 0.65);
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   CONECTOR PRINCIPAL
+===================================================== */
+
+.connector-main {
+  width: 1px;
+
+  height: 60px;
+
+  margin: 0 auto;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(217, 36, 36, 0.9),
+      rgba(217, 36, 36, 0.35)
+    );
+}
+
+
+/* =====================================================
+   CONECTOR HACIA NIVEL 3
+===================================================== */
+
+.connector-sub {
+  width: 1px;
+
+  height: 65px;
+
+  margin: 0 auto;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(217, 36, 36, 0.65),
+      rgba(217, 36, 36, 0.35)
+    );
+}
+
+
+/* =====================================================
+   RAMAS
+===================================================== */
+
+.rama {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+/* =====================================================
+   CONECTOR HORIZONTAL
+===================================================== */
+
+.connector-horizontal {
+  position: absolute;
+
+  top: -30px;
+
+  left: 50%;
+
+  width: calc(100% + 100px);
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(217, 36, 36, 0.7),
+      transparent
+    );
+}
+
+
+/* =====================================================
+   CONECTOR VERTICAL DE CADA RAMA
+===================================================== */
+
+.rama::before {
+  content: '';
+
+  position: absolute;
+
+  top: -30px;
+
+  left: 50%;
+
+  width: 1px;
+
+  height: 30px;
+
+  transform: translateX(-50%);
+
+  background: rgba(217, 36, 36, 0.65);
+}
+
+
+/* =====================================================
+   PUNTO DE CONEXIÓN
+===================================================== */
+
+.rama::after {
+  content: '';
+
+  position: absolute;
+
+  top: -33px;
+
+  left: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #d92424;
+
+  box-shadow:
+    0 0 12px rgba(217, 36, 36, 0.7);
+}
+
+
+/* =====================================================
+   EFECTO DECORATIVO DEL ORGANIGRAMA
+===================================================== */
+
+.organigrama::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(217, 36, 36, 0.045),
+      transparent 68%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .estructura-page {
+    padding-top: 60px;
   }
+
+  .estructura-header {
+    margin-bottom: 55px;
+  }
+
+  .nivel-secundario {
+    gap: 50px;
+
+    grid-template-columns:
+      repeat(2, minmax(220px, 280px));
+  }
+
+  .persona-card {
+    width: 250px;
+  }
+
+  .persona-director {
+    width: 290px;
+  }
+
+  .foto-container {
+    width: 125px;
+    height: 125px;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .estructura-page {
+    padding: 40px 0 80px;
+  }
+
+  .top-actions,
+  .estructura-shell {
+    width: 90%;
+  }
+
+  .estructura-header {
+    margin-bottom: 45px;
+  }
+
+  .estructura-header h1 {
+    font-size: clamp(2.6rem, 12vw, 3.5rem);
+  }
+
+  .estructura-header p {
+    font-size: 0.95rem;
+  }
+
+
+  /* -----------------------------------------------
+     ORGANIGRAMA EN COLUMNA
+  ------------------------------------------------ */
+
+  .nivel-secundario {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 55px;
+
+    width: 100%;
+  }
+
+  .nivel-terciario {
+    width: 100%;
+  }
+
+
+  /* -----------------------------------------------
+     TARJETAS
+  ------------------------------------------------ */
+
+  .persona-card,
+  .persona-director {
+    width: min(300px, 100%);
+  }
+
+
+  .foto-container {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  /* -----------------------------------------------
+     CONECTORES
+  ------------------------------------------------ */
+
+  .connector-horizontal {
+    display: none;
+  }
+
+  .rama::before {
+    display: block;
+  }
+
+  .rama::after {
+    display: block;
+  }
+
+  .connector-sub {
+    height: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .persona-card,
+  .persona-director {
+    width: 100%;
+  }
+
+  .foto-container {
+    width: 105px;
+    height: 105px;
+  }
+
+  .persona-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .persona-info h3 {
+    font-size: 1rem;
+  }
+
 }

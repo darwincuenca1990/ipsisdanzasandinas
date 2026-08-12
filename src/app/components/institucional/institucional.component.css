@@ -638,7 +638,7 @@
 .director-card {
   position: relative;
   width: min(560px, 100%);
-  min-height: 340px;
+  min-height: 30px;
   padding: 35px;
   margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);

@@ -270,33 +270,35 @@
 
       <!-- DIRECTOR -->
 
-      <div class="director-card">
+      <div class="organization-flow">
 
-        <div class="director-icon">
-          ✦
-        </div>
+        <a class="director-card director-link" [routerLink]="['/estructura-organizacional']">
 
-        <div>
+          <div class="director-icon">
+            ✦
+          </div>
 
-          <span>
-            DIRECCIÓN GENERAL
-          </span>
+          <div>
 
-          <h3>
-            IPSIS Danzas Andinas
-          </h3>
+            <span>
+              DIRECCIÓN GENERAL
+            </span>
 
-        </div>
+            <h3>
+              IPSIS Danzas Andinas
+            </h3>
 
-      </div>
+          </div>
+
+        </a>
 
 
-      <div class="organization-connector"></div>
+        <div class="organization-connector"></div>
 
 
-      <!-- ELENCOS -->
+        <!-- ELENCOS -->
 
-      <div class="elencos-grid">
+        <div class="elencos-grid">
 
 
         <!-- INFANTIL -->
@@ -412,6 +414,8 @@
 
       </div>
 
+      </div>
+
     </div>
 
   </section>
@@ -441,13 +445,19 @@
       <div class="quick-links-grid">
 
         <a href="/nuestras-presentaciones" class="quick-link-card">
-          <span class="link-label">Nuestras Presentaciones</span>
-          <p>Explora obras, festivales y presentaciones destacadas de IPSIS.</p>
+          <span class="quick-link-icon">🎭</span>
+          <div class="quick-link-copy">
+            <span class="link-label">Nuestras Presentaciones</span>
+            <p>Explora obras, festivales y presentaciones destacadas de IPSIS.</p>
+          </div>
         </a>
 
         <a href="/proximos-eventos" class="quick-link-card">
-          <span class="link-label">Próximos Eventos</span>
-          <p>Revisa el calendario de eventos y las próximas salidas del elenco.</p>
+          <span class="quick-link-icon">📅</span>
+          <div class="quick-link-copy">
+            <span class="link-label">Próximos Eventos</span>
+            <p>Revisa el calendario de eventos y las próximas salidas del elenco.</p>
+          </div>
         </a>
 
       </div>
@@ -496,11 +506,11 @@
 
           <a
             class="download-button"
-            href="/assets/documents/PORTAFOLIO_IPSIS_DANZAS_ANDINAS_FINAL.pdf"
+            [href]="downloadUrl"
             target="_blank"
             rel="noopener noreferrer"
-            download
           >
+            <span class="download-icon">📄</span>
             Descargar PDF
           </a>
 
@@ -514,25 +524,25 @@
 
           <ul class="contact-list">
             <li>
-              <strong>Instagram:</strong>
+              <strong><span class="contact-icon">📸</span>Instagram:</strong>
               <a href="https://instagram.com/ipsisdanzasandinas" target="_blank" rel="noopener noreferrer">
                 @ipsisdanzasandinas
               </a>
             </li>
             <li>
-              <strong>Facebook:</strong>
+              <strong><span class="contact-icon">👍</span>Facebook:</strong>
               <a href="https://facebook.com/ipsisdanzasandinas" target="_blank" rel="noopener noreferrer">
                 IPSIS Danzas Andinas
               </a>
             </li>
             <li>
-              <strong>WhatsApp:</strong>
+              <strong><span class="contact-icon">💬</span>WhatsApp:</strong>
               <a href="https://wa.me/593999999999" target="_blank" rel="noopener noreferrer">
                 +593 99 999 9999
               </a>
             </li>
             <li>
-              <strong>Teléfono:</strong>
+              <strong><span class="contact-icon">📞</span>Teléfono:</strong>
               <a href="tel:+593999999999">
                 +593 99 999 9999
               </a>

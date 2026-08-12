@@ -1,0 +1,75 @@
+.estructura-page {
+  min-height: 100vh;
+  padding: 80px 24px 100px;
+  background: #080808;
+  color: #f9f9f9;
+}
+
+.estructura-shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.estructura-header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.22rem;
+  color: #d92424;
+  margin-bottom: 16px;
+  font-size: 0.78rem;
+}
+
+.estructura-header h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.estructura-header p {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+.organigrama-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.organigrama-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 30px 28px;
+  border-radius: 20px;
+}
+
+.organigrama-card .role {
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  color: #d92424;
+  font-size: 0.75rem;
+}
+
+.organigrama-card strong {
+  display: block;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+
+.lead-card {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .organigrama-grid {
+    grid-template-columns: 1fr;
+  }
+}

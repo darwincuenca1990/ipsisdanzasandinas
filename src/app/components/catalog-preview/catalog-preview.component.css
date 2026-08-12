@@ -1,0 +1,83 @@
+.catalog-preview-page {
+  min-height: 100vh;
+  background: #060606;
+  color: #f7f7f7;
+  padding: 64px 24px 80px;
+}
+
+.catalog-preview-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.catalog-preview-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.catalog-preview-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.02;
+}
+
+.catalog-preview-header p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: #d92424;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.catalog-preview-frame {
+  min-height: 74vh;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.catalog-preview-frame iframe {
+  width: 100%;
+  min-height: 74vh;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .catalog-preview-header {
+    flex-direction: column;
+  }
+
+  .catalog-preview-frame {
+    min-height: 62vh;
+  }
+}

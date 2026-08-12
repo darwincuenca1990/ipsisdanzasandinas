@@ -1,0 +1,29 @@
+<section class="catalog-preview-page">
+  <div class="catalog-preview-shell">
+    <div class="catalog-preview-header">
+      <div>
+        <span class="eyebrow">Portafolio</span>
+        <h1>Previsualiza el catálogo</h1>
+        <p>
+          Revisa el PDF antes de descargarlo. Si quieres llevarlo contigo, usa el botón de descarga.
+        </p>
+      </div>
+
+      <div class="catalog-actions">
+        <a class="download-button" [href]="downloadUrl" target="_blank" rel="noopener noreferrer">
+          <span class="download-icon">📄</span>
+          Descargar PDF
+        </a>
+        <a class="back-link" [routerLink]="['/']">← Volver al menú principal</a>
+      </div>
+    </div>
+
+    <div class="catalog-preview-frame">
+      <iframe
+        [src]="previewUrl"
+        title="Previsualización del portafolio IPSIS"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>

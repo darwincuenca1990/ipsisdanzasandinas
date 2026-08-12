@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-proximos-eventos',
+  selector: 'app-estructura-organizacional',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './proximos-eventos.html',
-  styleUrls: ['./proximos-eventos.css'],
+  templateUrl: './estructura-organizacional.html',
+  styleUrl: './estructura-organizacional.css',
 })
-export class ProximosEventos {
+export class EstructuraOrganizacional {
 
 }

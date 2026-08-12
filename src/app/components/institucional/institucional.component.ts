@@ -1,10 +1,12 @@
 import { CommonModule, NgForOf } from '@angular/common';
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { PORTAFOLIO_GOOGLE_DRIVE_DOWNLOAD_URL } from '../../pdf.constants';
 
 @Component({
   selector: 'app-institucional',
   standalone: true,
-  imports: [CommonModule, NgForOf],
+  imports: [CommonModule, NgForOf, RouterLink],
   templateUrl: './institucional.component.html',
   styleUrls: ['./institucional.component.css']
 })
@@ -32,6 +34,7 @@ export class InstitucionalComponent implements OnInit, OnDestroy {
     }
   ];
 
+  downloadUrl = PORTAFOLIO_GOOGLE_DRIVE_DOWNLOAD_URL;
   private intervalId?: number;
 
   constructor(private cdr: ChangeDetectorRef) {}

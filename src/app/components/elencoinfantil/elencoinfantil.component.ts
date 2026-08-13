@@ -10,6 +10,39 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./elencoinfantil.component.css']
 })
 export class ElencoinfantilComponent {
+instructores = [
+  {
+    name: 'Jennifer Vazques',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/Jennifer.jpeg'
+  },
+  {
+    name: 'Angie',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/instructor-2.jpg'
+  },
+  {
+    name: 'Sarita Poma',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/instructor-3.jpg'
+  },
+  {
+    name: 'Marco ',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/instructor-4.jpg'
+  },
+  {
+    name: 'Daissy Alulima',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/instructor-5.jpg'
+  }
+];
+
   gallery = [
     {
       image: 'assets/images/infantil/I1.jpeg',

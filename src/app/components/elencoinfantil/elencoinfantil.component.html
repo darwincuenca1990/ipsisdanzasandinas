@@ -53,7 +53,67 @@
       </div>
     </aside>
   </section>
+<!-- =====================================================
+     EQUIPO DE INSTRUCTORES
+===================================================== -->
 
+<section class="instructores-section">
+
+  <header class="instructores-header">
+
+    <span class="section-tag">
+      EQUIPO ARTÍSTICO
+    </span>
+
+    <h2>
+      Instructores
+    </h2>
+
+    <p>
+      El equipo que acompaña, guía y fortalece el proceso
+      artístico de nuestros bailarines.
+    </p>
+
+  </header>
+
+
+  <div class="instructores-grid">
+
+    <article
+      class="instructor-card"
+      *ngFor="let instructor of instructores">
+
+      <div class="instructor-photo">
+
+        <img
+          [src]="instructor.image"
+          [alt]="instructor.name">
+
+      </div>
+
+      <div class="instructor-data">
+
+        <span class="instructor-role">
+          {{ instructor.role }}
+        </span>
+
+        <h3>
+          {{ instructor.name }}
+        </h3>
+
+        <div class="instructor-line"></div>
+
+        <p>
+          {{ instructor.description }}
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
   <section class="gallery-section">
     <div class="gallery-header">
       <span class="section-tag">GALERÍA</span>

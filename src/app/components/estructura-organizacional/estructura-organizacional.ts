@@ -13,7 +13,7 @@ export class EstructuraOrganizacional {
  director = {
     nombre: 'Mgtr. Darwin Cuenca',
     cargo: 'Dirección General',
-    foto: 'assets/images/estructuraOrganizacional/darwin-cuenca.jpg'
+    foto: 'assets/images/estructuraOrganizacional/Darwin.JPEG'
   };
 
   subdirectora = {

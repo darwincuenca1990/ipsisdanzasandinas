@@ -10,6 +10,17 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./elencomaster.component.css']
 })
 export class ElencomasterComponent {
+instructores = [
+  {
+    name: 'Karla Cartuche',
+    role: 'Instructor',
+    description: 'Danza andina y formación coreográfica.',
+    image: 'assets/images/instructores/Jennifer.jpeg'
+  },
+  
+];
+
+
   gallery = [
     { image: 'assets/images/master/P1.JPG', title: 'Máster en escena' },
     { image: 'assets/images/master/P2.JPG', title: 'Máster en escena' },

@@ -72,34 +72,79 @@
     </article>
   </div>
 
-  <div class="tab-panel" *ngIf="activeTab === 'presentaciones'">
-    <div class="event-grid">
-      <article class="event-card">
-        <span class="event-label">Festival</span>
-        <h3>Festival de la Tradición</h3>
-        <p>
-          Presentación de repertorio andino con coreografías que celebran la identidad regional y
-          la raíz cultural del país.
-        </p>
-      </article>
+<div class="tab-panel" *ngIf="activeTab === 'presentaciones'">
 
-      <article class="event-card">
-        <span class="event-label">Evento institucional</span>
-        <h3>Velada Cultural IPSIS</h3>
-        <p>
-          Espectáculo que reúne a nuestras tres generaciones en una misma puesta en escena, con un
-          lenguaje artístico y cultural profundamente ligado a nuestras raíces.
-        </p>
-      </article>
+  <div class="presentations-intro">
+    <span class="section-tag">EN ESCENA</span>
 
-      <article class="event-card">
-        <span class="event-label">Presentación abierta</span>
-        <h3>Encuentro comunitario</h3>
-        <p>
-          Participación en espacios compartidos con el público, donde la danza se convierte en un
-          puente de convivencia, homenaje y orgullo cultural.
-        </p>
-      </article>
-    </div>
+    <h2>
+      Presentaciones
+    </h2>
+
+    <p>
+      Revive algunos de los momentos de IPSIS Danzas Andinas
+      sobre el escenario.
+    </p>
   </div>
+
+
+  <div class="youtube-grid">
+
+    <article
+      class="youtube-card"
+      *ngFor="let video of presentations">
+
+      <a
+        class="youtube-thumb"
+        [href]="video.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="'Ver ' + video.title + ' en YouTube'"
+      >
+
+        <img
+          [src]="video.thumbnail"
+          [alt]="video.title"
+          loading="lazy"
+        />
+
+        <div class="youtube-overlay"></div>
+
+        <span class="play-badge">
+          ▶
+        </span>
+
+      </a>
+
+
+      <div class="youtube-info">
+
+        <span class="event-label">
+          {{ video.category }}
+        </span>
+
+        <h3>
+          {{ video.title }}
+        </h3>
+
+        <p>
+          {{ video.description }}
+        </p>
+
+        <a
+          class="video-link"
+          [href]="video.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver en YouTube →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</div>
 </section>

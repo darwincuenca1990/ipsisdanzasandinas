@@ -277,3 +277,320 @@
     font-size: 1.8rem;
   }
 }
+
+/* =====================================================
+   INSTRUCTORES
+===================================================== */
+
+.instructores-section {
+  width: min(1180px, 88%);
+  margin: 90px auto 0;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.instructores-header {
+  margin-bottom: 38px;
+}
+
+.instructores-header h2 {
+  margin: 0 0 18px;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.02em;
+}
+
+.instructores-header p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+}
+
+
+/* =====================================================
+   GRID DE INSTRUCTORES
+===================================================== */
+
+.instructores-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =====================================================
+   FICHA DEL INSTRUCTOR
+===================================================== */
+
+.instructor-card {
+  position: relative;
+
+  padding: 32px 25px 28px;
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Línea roja superior */
+
+.instructor-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d92424,
+      transparent
+    );
+
+  opacity: 0.7;
+}
+
+
+/* Hover */
+
+.instructor-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(217, 36, 36, 0.65);
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   FOTOGRAFÍA
+===================================================== */
+
+.instructor-photo {
+
+  width: 145px;
+  height: 145px;
+
+  margin: 0 auto 24px;
+
+  padding: 4px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d92424,
+      #7d1414,
+      #d92424
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(217, 36, 36, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.instructor-card:hover .instructor-photo {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 0 0 1px rgba(217, 36, 36, 0.5),
+    0 15px 35px rgba(0, 0, 0, 0.65);
+}
+
+
+/* Imagen */
+
+.instructor-photo img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   DATOS
+===================================================== */
+
+.instructor-data {
+  text-align: center;
+}
+
+
+.instructor-role {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d92424;
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.20rem;
+
+  text-transform: uppercase;
+}
+
+
+.instructor-data h3 {
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =====================================================
+   LÍNEA DECORATIVA
+===================================================== */
+
+.instructor-line {
+
+  width: 35px;
+
+  height: 1px;
+
+  margin: 16px auto;
+
+  background: #d92424;
+
+  opacity: 0.7;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.instructor-card:hover .instructor-line {
+  width: 60px;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.instructor-data p {
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.84rem;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .instructores-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .instructores-section {
+    margin-top: 70px;
+  }
+
+  .instructores-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+  }
+
+  .instructor-card {
+
+    padding:
+      28px 22px 25px;
+
+  }
+
+  .instructor-photo {
+
+    width: 125px;
+    height: 125px;
+
+  }
+
+}

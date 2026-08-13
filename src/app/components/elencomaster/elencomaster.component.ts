@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule,Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,13 +9,15 @@ import { RouterLink } from '@angular/router';
   templateUrl: './elencomaster.component.html',
   styleUrls: ['./elencomaster.component.css']
 })
-export class ElencomasterComponent {
-instructores = [
+export class ElencomasterComponent implements OnInit{
+  constructor(private location: Location) {}
+
+  instructores = [
   {
     name: 'Karla Cartuche',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/Jennifer.jpeg'
+    image: 'assets/images/instructores/Karla.jpeg'
   },
   
 ];
@@ -47,4 +49,16 @@ instructores = [
   nextImage(): void {
     this.selectedIndex = (this.selectedIndex + 1) % this.gallery.length;
   }
+
+  ngOnInit(): void {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }  
+
+  goBack(): void {
+    this.location.back();
+  }  
 }

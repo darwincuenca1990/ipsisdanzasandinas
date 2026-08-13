@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule,Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -10,6 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./nuestras-presentaciones.css'],
 })
 export class NuestrasPresentaciones {
+  constructor(private location: Location) {}
+  
   activeTab: 'obras' | 'presentaciones' = 'obras';
 
   setTab(tab: 'obras' | 'presentaciones'): void {
@@ -62,4 +64,8 @@ export class NuestrasPresentaciones {
     thumbnail: 'https://img.youtube.com/vi/vsmpTyrP77Y/hqdefault.jpg'
   }
 ];
+
+  goBack(): void {
+    this.location.back();
+  }
 }

@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule,Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,8 +9,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './estructura-organizacional.html',
   styleUrls: ['./estructura-organizacional.css'],
 })
-export class EstructuraOrganizacional {
- director = {
+export class EstructuraOrganizacional implements OnInit {
+ constructor(private location: Location) {}
+  director = {
     nombre: 'Mgtr. Darwin Cuenca',
     cargo: 'Dirección General',
     foto: 'assets/images/estructuraOrganizacional/Darwin.JPEG'
@@ -19,13 +20,13 @@ export class EstructuraOrganizacional {
   subdirectora = {
     nombre: 'Ing. Viviana Cabrera',
     cargo: 'Subdirectora General',
-    foto: 'assets/images/estructuraOrganizacional/Vivi.jpeg'
+    foto: 'assets/images/estructuraOrganizacional/Vivi1.jpeg'
   };
 
   contabilidad = {
     nombre: 'Mgtr. Daissy Alulima',
     cargo: 'Contabilidad',
-    foto: 'assets/images/estructuraOrganizacional/daissy-alulima.jpg'
+    foto: 'assets/images/estructuraOrganizacional/Daisy.jpeg'
   };
 
   communityManager = {
@@ -33,4 +34,16 @@ export class EstructuraOrganizacional {
     cargo: 'Community Manager',
     foto: 'assets/images/estructuraOrganizacional/Daya.jpeg'
   };
+
+  ngOnInit(): void {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }  
+
+  goBack(): void {
+    this.location.back();
+  }  
 }

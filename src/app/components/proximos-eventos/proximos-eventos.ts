@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule,Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -11,4 +11,9 @@ import { RouterLink } from '@angular/router';
 })
 export class ProximosEventos {
 
+  constructor(private location: Location) {}
+
+  goBack(): void {
+    this.location.back();
+  }
 }

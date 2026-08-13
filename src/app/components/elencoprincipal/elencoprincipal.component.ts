@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule,Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './elencoprincipal.component.html',
   styleUrls: ['./elencoprincipal.component.css']
 })
-export class ElencoprincipalComponent {
+export class ElencoprincipalComponent implements OnInit {
+
+  constructor(private location: Location) {}
+
   gallery = [
     { image: 'assets/images/principal/F1.png', title: 'Fiesta de mi pueblo' },
     { image: 'assets/images/principal/F2.png', title: 'Fiesta de mi pueblo' },
@@ -75,5 +78,18 @@ export class ElencoprincipalComponent {
 
   nextImage(): void {
     this.selectedIndex = (this.selectedIndex + 1) % this.gallery.length;
+  }
+
+  ngOnInit(): void {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }  
+
+
+  goBack(): void {
+    this.location.back();
   }
 }

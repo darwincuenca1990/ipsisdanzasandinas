@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule,Location } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,8 +9,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './elencoinfantil.component.html',
   styleUrls: ['./elencoinfantil.component.css']
 })
-export class ElencoinfantilComponent {
-instructores = [
+export class ElencoinfantilComponent  implements OnInit {
+ constructor(private location: Location) {}
+  instructores = [
   {
     name: 'Jennifer Vazques',
     role: 'Instructor',
@@ -21,25 +22,25 @@ instructores = [
     name: 'Angie',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/instructor-2.jpg'
+    image: 'assets/images/instructores/Angie.jpeg'
   },
   {
     name: 'Sarita Poma',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/instructor-3.jpg'
+    image: 'assets/images/instructores/Sarita.jpeg'
   },
   {
     name: 'Marco ',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/instructor-4.jpg'
+    image: 'assets/images/instructores/Marco.jpeg'
   },
   {
     name: 'Daissy Alulima',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/instructor-5.jpg'
+    image: 'assets/images/instructores/Daisy.jpeg'
   }
 ];
 
@@ -133,5 +134,17 @@ instructores = [
 
   nextImage(): void {
     this.selectedIndex = (this.selectedIndex + 1) % this.gallery.length;
+  }
+
+    ngOnInit(): void {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

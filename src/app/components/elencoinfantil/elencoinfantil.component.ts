@@ -11,6 +11,12 @@ import { RouterLink } from '@angular/router';
 })
 export class ElencoinfantilComponent  implements OnInit {
  constructor(private location: Location) {}
+
+ directiva = {
+  image: 'assets/images/directivas/DirectivaInfantil.jpeg',
+  title: 'Directiva Elenco Infantil'
+};
+
   instructores = [
   {
     name: 'Jennifer Vazques',

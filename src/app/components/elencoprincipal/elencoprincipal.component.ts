@@ -80,6 +80,11 @@ export class ElencoprincipalComponent implements OnInit {
     this.selectedIndex = (this.selectedIndex + 1) % this.gallery.length;
   }
 
+   directiva = {
+  image: 'assets/images/directivas/DirectivaPlanta.jpeg',
+  title: 'Directiva Elenco Principal'
+};
+
   ngOnInit(): void {
     window.scrollTo({
       top: 0,

@@ -12,6 +12,10 @@ import { RouterLink } from '@angular/router';
 export class ElencomasterComponent implements OnInit{
   constructor(private location: Location) {}
 
+   directiva = {
+  image: 'assets/images/directivas/DirectivaMaster.jpeg',
+  title: 'Directiva Elenco Máster'
+};
   instructores = [
   {
     name: 'Karla Cartuche',

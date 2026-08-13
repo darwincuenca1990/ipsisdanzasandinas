@@ -277,3 +277,176 @@
     font-size: 1.8rem;
   }
 }
+
+/* =====================================================
+   DIRECTIVA DEL ELENCO
+===================================================== */
+
+.directiva-section {
+  width: min(1180px, 88%);
+  margin: 80px auto 0;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.directiva-header {
+  margin-bottom: 32px;
+}
+
+.directiva-header h2 {
+  margin: 0 0 16px;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+
+  color: #fff;
+}
+
+.directiva-header p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   TARJETA DIRECTIVA
+===================================================== */
+
+.directiva-card {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding: 24px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.directiva-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(217, 36, 36, 0.6);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.directiva-image-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background: #050505;
+
+  overflow: hidden;
+}
+
+.directiva-image {
+  display: block;
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  max-height: 650px;
+
+  object-fit: contain;
+
+  transition: transform 0.5s ease;
+}
+
+.directiva-card:hover .directiva-image {
+  transform: scale(1.015);
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.directiva-caption {
+  padding: 22px 8px 6px;
+
+  text-align: center;
+}
+
+.directiva-caption span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.28rem;
+
+  text-transform: uppercase;
+
+  color: #d92424;
+}
+
+.directiva-caption h3 {
+  margin: 0;
+
+  font-size: 1.6rem;
+
+  color: #fff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .directiva-section {
+    margin-top: 60px;
+  }
+
+  .directiva-card {
+    padding: 15px;
+  }
+
+  .directiva-image {
+    max-height: 500px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .directiva-section {
+    width: min(1180px, 92%);
+  }
+
+  .directiva-card {
+    padding: 10px;
+  }
+
+  .directiva-image {
+    max-height: 400px;
+  }
+
+  .directiva-caption {
+    padding-top: 18px;
+  }
+
+}

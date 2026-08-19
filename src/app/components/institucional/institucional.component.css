@@ -92,6 +92,89 @@
 /* make sure main content stays above curves (exclude the decorative-curves container) */
 .institucional > :not(.decorative-curves) { position: relative; z-index: 2; }
 
+.pdf-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.pdf-modal {
+  width: min(100%, 980px);
+  height: min(92vh, 820px);
+  display: flex;
+  flex-direction: column;
+  background: #171717;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+.pdf-modal-header,
+.pdf-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.pdf-modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pdf-modal-header h2 {
+  margin: 0.3rem 0 0;
+  font-size: 1.25rem;
+}
+
+.pdf-modal-close {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.pdf-modal-content {
+  flex: 1;
+  min-height: 0;
+  background: #303030;
+}
+
+.pdf-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.pdf-modal-footer {
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.download-button {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .pdf-modal-backdrop {
+    padding: 0;
+  }
+
+  .pdf-modal {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* also ensure each section's direct children sit above that section's curves */
 .section > :not(.decorative-curves) { position: relative; z-index: 2; }
 

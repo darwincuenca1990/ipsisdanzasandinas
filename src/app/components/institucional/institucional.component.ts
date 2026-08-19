@@ -1,7 +1,7 @@
 import { CommonModule, NgForOf } from '@angular/common';
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { PORTAFOLIO_GOOGLE_DRIVE_DOWNLOAD_URL } from '../../pdf.constants';
 
 @Component({
   selector: 'app-institucional',
@@ -38,10 +38,34 @@ export class InstitucionalComponent implements OnInit, OnDestroy {
   visionImage = 'assets/images/Wiki.jpg';
   closingImage = 'assets/images/bannerInfantil.jpeg';
 
-  downloadUrl = PORTAFOLIO_GOOGLE_DRIVE_DOWNLOAD_URL;
+  downloadUrl = 'assets/documents/PORTAFOLIO_IPSIS_DANZAS_ANDINAS_FINAL_1.pdf';
+  previewUrl: SafeResourceUrl;
+  isPdfPreviewOpen = false;
   private intervalId?: number;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private sanitizer: DomSanitizer
+  ) {
+    this.previewUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.downloadUrl);
+  }
+
+  openPdfPreview(): void {
+    this.isPdfPreviewOpen = true;
+    document.body.classList.add('pdf-modal-open');
+  }
+
+  closePdfPreview(): void {
+    this.isPdfPreviewOpen = false;
+    document.body.classList.remove('pdf-modal-open');
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
+    if (this.isPdfPreviewOpen) {
+      this.closePdfPreview();
+    }
+  }
 
   ngOnInit(): void {
     this.intervalId = window.setInterval(() => {
@@ -53,6 +77,7 @@ export class InstitucionalComponent implements OnInit, OnDestroy {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
+    document.body.classList.remove('pdf-modal-open');
   }
 
   nextSlide(): void {

@@ -37,12 +37,6 @@ export class ElencoinfantilComponent  implements OnInit {
     image: 'assets/images/instructores/Sarita.jpeg'
   },
   {
-    name: 'Marco ',
-    role: 'Instructor',
-    description: 'Danza andina y formación coreográfica.',
-    image: 'assets/images/instructores/Marco.jpeg'
-  },
-  {
     name: 'Daissy Alulima',
     role: 'Instructor',
     description: 'Danza andina y formación coreográfica.',

@@ -42,6 +42,7 @@ export class ElencoinfantilComponent  implements OnInit {
     description: 'Danza andina y formación coreográfica.',
     image: 'assets/images/instructores/Daisy.jpeg'
   }
+  
 ];
 
   gallery = [
